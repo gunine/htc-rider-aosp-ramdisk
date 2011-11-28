@@ -1,0 +1,26 @@
+on emmc
+    mount ext3 /dev/block/mmcblk0p23 /system remount rw
+    mkdir /system/etc/firmware      0771 system system
+    mkdir /system/etc/firmware/misc 0771 system system
+    devwait /dev/block/mmcblk0p18
+    mount vfat /dev/block/mmcblk0p18 /system/etc/firmware/misc ro shortname=lower
+    symlink /system/etc/firmware/misc/q6.b05 /system/etc/firmware/q6.b05
+    symlink /system/etc/firmware/misc/q6.b04 /system/etc/firmware/q6.b04
+    symlink /system/etc/firmware/misc/q6.b03 /system/etc/firmware/q6.b03
+    symlink /system/etc/firmware/misc/q6.b02 /system/etc/firmware/q6.b02
+    symlink /system/etc/firmware/misc/q6.b01 /system/etc/firmware/q6.b01
+    symlink /system/etc/firmware/misc/q6.b00 /system/etc/firmware/q6.b00
+    symlink /system/etc/firmware/misc/q6.mdt /system/etc/firmware/q6.mdt
+    symlink /system/etc/firmware/misc/modem.b09 /system/etc/firmware/modem.b09
+    symlink /system/etc/firmware/misc/modem.b08 /system/etc/firmware/modem.b08
+    symlink /system/etc/firmware/misc/modem.b07 /system/etc/firmware/modem.b07
+    symlink /system/etc/firmware/misc/modem.b06 /system/etc/firmware/modem.b06
+    symlink /system/etc/firmware/misc/modem.b05 /system/etc/firmware/modem.b05
+    symlink /system/etc/firmware/misc/modem.b04 /system/etc/firmware/modem.b04
+    symlink /system/etc/firmware/misc/modem.b03 /system/etc/firmware/modem.b03
+    symlink /system/etc/firmware/misc/modem.b02 /system/etc/firmware/modem.b02
+    symlink /system/etc/firmware/misc/modem.b01 /system/etc/firmware/modem.b01
+    symlink /system/etc/firmware/misc/modem.b00 /system/etc/firmware/modem.b00
+    symlink /system/etc/firmware/misc/modem.mdt /system/etc/firmware/modem.mdt
+    mount ext3 /dev/block/mmcblk0p23 /system remount ro
+
